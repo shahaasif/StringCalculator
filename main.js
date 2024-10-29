@@ -9,6 +9,7 @@ class StringCalculator {
     // Split numbers by the delimiter
     const numberList = numbers.split(delimiter);
     let total = 0;
+    const negatives = [];
 
     // Process each number
     numberList.forEach((numStr) => {
@@ -21,6 +22,11 @@ class StringCalculator {
         }
       }
     });
+
+    // Throw error if there are negative numbers
+    if (negatives.length > 0) {
+      throw new Error(`negative numbers not allowed: ${negatives.join(", ")}`);
+    }
 
     return total;
   }
