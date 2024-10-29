@@ -42,3 +42,11 @@ console.log("1,-2,3,-4=>", StringCalculator.add("1,-2,3,-4")); // Should throw e
 } catch (e) {
 console.error(e.message); // Output: negative numbers not allowed: -2, -4
 }
+
+### Setup
+
+```
+Run index file in browser and  check console.
+cd StringCalculator
+git clone https://github.com/shahaasif/StringCalculator.git
+```
