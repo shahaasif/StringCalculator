@@ -6,6 +6,13 @@ class StringCalculator {
     // Default delimiter as comma or newline
     let delimiter = /,|\n/;
 
+    // Check for custom delimiter
+    if (numbers.startsWith("//")) {
+      const parts = numbers.split("\n", 2);
+      delimiter = parts[0].slice(2);
+      numbers = parts[1];
+    }
+
     // Split numbers by the delimiter
     const numberList = numbers.split(delimiter);
     let total = 0;
